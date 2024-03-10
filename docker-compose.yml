@@ -1,0 +1,11 @@
+version: '1.0'
+services:
+    api:
+        build: .
+        image: offload-api:latest
+        ports:
+            - 8000:8000
+        volumes:
+            - type: bind
+              source: .
+              target: /app/
